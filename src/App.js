@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Video from './components/Video'
+import Navbar from './components/Navbar'
+import Button from './components/Button'
+import Create from './components/Create'
+import Verify from './components/Verify'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+  
+      <BrowserRouter>
+        <div className='btn'>
+          <Button as={Link} to='/create' value="Create Passport" />
+          <Button as={Link} to="/verify" value="Verify Passport" />
+        </div>
+
+        <Routes>
+          <Route exact path="create" element={<Create/>} />
+          <Route exact path="verify" element={<Verify/>} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

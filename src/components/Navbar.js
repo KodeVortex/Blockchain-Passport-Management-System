@@ -1,16 +1,23 @@
 import React from 'react'
 import Connect from './Connect'
-
+import Home from './Home';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom'
 export default function Navbar() {
   return (
     <React.Fragment>
         <header>
   <nav className="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
     <div className="container">
-      <a className="navbar-brand" href="#!">
+      <div className="navbar-brand">
         <span style={{ color: "#5e9693" }}>Passport</span>
         <span style={{ color: "#fff",paddingLeft:"3px" }}>Verification</span>
-      </a>
+      </div>
+
       <button
         className="navbar-toggler"
         type="button"
@@ -45,5 +52,5 @@ export default function Navbar() {
   </nav>
 </header>
     </React.Fragment>
-  )
+  );
 }

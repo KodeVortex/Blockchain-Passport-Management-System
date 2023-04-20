@@ -6,15 +6,16 @@ The aim of this project is to develop a simple blockchain based digital passport
 
 ## Technology Stack
 
-Front End : React.js
-Backend : Node.js
-Blockchain : Ethereum
-Node Provider : Infura
-Ethereum development environment : Hardhat
-JavaScript library : Ethers.js
-Wallet : Metamask
+**Front End :** React.js\
+**Backend :** Node.js\
+**Blockchain :** Ethereum\
+**Node Provider :** Infura\
+**Ethereum development environment :** Hardhat\
+**JavaScript library :** Ethers.js\
+**Wallet :** Metamask\
 
 ### Installing Dependencies
+go to the project directory and run the below command on cmd.\
 `npm install`
 This will install all the required dependencies in the "node modules" folder.
 Runs the app in the development mode.\

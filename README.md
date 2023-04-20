@@ -2,7 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The aim of this project is to develop a simple blockchain based digital passport where, the passport details of the user will be stored on a block. The passport can only be viewed if the user shares the hash of the block. The project is developed on Etherium blockchain.
+The aim of this project is to develop a simple blockchain based digital passport where, the passport details of the user will be stored on a block. The passport can only be viewed if the user shares the hash of the block. The project is developed on Etherium blockchain.\
+![App UI](./src/assets/React%20App.png)  
 
 ## Technology Stack
 

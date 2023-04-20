@@ -1,13 +1,22 @@
-# Getting Started with Create React App
+# Blockchain based Digital Passport.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+The aim of this project is to develop a simple blockchain based digital passport where, the passport details of the user will be stored on a block. The passport can only be viewed if the user shares the hash of the block. The project is developed on Etherium blockchain.
 
-In the project directory, you can run:
+## Technology Stack
 
-### `npm start`
+Front End : React.js
+Backend : Node.js
+Blockchain : Ethereum
+Node Provider : Infura
+Ethereum development environment : Hardhat
+JavaScript library : Ethers.js
+Wallet : Metamask
 
+### Installing Dependencies
+`npm install`
+This will install all the required dependencies in the "node modules" folder.
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 

@@ -19,8 +19,7 @@ Go to the project directory and run the below command on cmd.\
 `npm install`\
 This will install all the required dependencies in the "node modules" folder.
 ### Run the app
-`npm start`\
-Runs the app in the development mode.\
+To run the app in the development mode, go to project folder and run the command `npm start`\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.

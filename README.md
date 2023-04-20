@@ -18,9 +18,10 @@ The aim of this project is to develop a simple blockchain based digital passport
 go to the project directory and run the below command on cmd.\
 `npm install`
 This will install all the required dependencies in the "node modules" folder.
+### Run the app
+`npm install`
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 

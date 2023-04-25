@@ -20,6 +20,7 @@
 
 
 #wallet-button {
+  width:120px;
   margin-right: 5vw;
   padding: 9px;
   border: solid 2px white;

@@ -16,12 +16,11 @@ export default function Create() {
           </div>
           <div className="info">
             <input
-              className="fname"
               type="text"
               name="name"
-              placeholder="Full name"
+              placeholder="First name"
             />
-            <input type="text" name="name" placeholder="Email" />
+            <input type="text" name="name" placeholder="Last name" />
             <input type="text" name="name" placeholder="Phone number" />
             <input type="password" name="name" placeholder="Password" />
           </div>

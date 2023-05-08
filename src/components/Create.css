@@ -1,83 +1,121 @@
    .main-block {
-    width:100%;
-    height:100%;
-    position: absolute;
-    top:0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 25px;
-    margin-top:10px;
-    }   
-   main-block > div,form, input, select, p { 
-    padding: 0;
-    margin: 0;
-    outline: none;
-    font-family: Roboto, Arial, sans-serif;
-    font-size: 16px;
-    color: #eee;
-    }
-    main-block > h1, h2 {
-    text-transform: uppercase;
-    font-weight: 400;
-    }
-    main-block > h2 {
-    margin: 0 0 0 8px;
-    }
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      margin-top: 10px;
+   }
 
-    main-block > .left-part, form {
-    padding: 25px;
-    }
-   main-block > .left-part {
-    text-align: center;
-    }
-    .fa-graduation-cap {
-    font-size: 72px;
-    }
-    form {
-    background: rgba(0, 0, 0, 0.7); 
-    height:460px;
-    width:365px;
-    padding : 20px;
-    }
-    .title {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    }
-    .info {
-    display: flex;
-    flex-direction: column;
-    }
-    input, select {
-    padding: 5px;
-    margin-bottom: 30px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #eee;
-    }
-    input::placeholder {
-    color: #eee;
-    }
+   main-block>div,
+   form,
+   input,
+   select,
+   p {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+   }
 
-    .btn-item, #sbmt {
-    padding: 10px 5px;
-    margin: 20px 0 10px 0;
-    border-radius: 5px; 
-    border: none;
-    background: #26a9e0; 
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 400;
-    color: #fff;
-    }
+   main-block>h1,
+   h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+   }
 
-    #sbmt {
-    width: 100%;
-    }
-    #sbmt:hover, .btn-item:hover {
-    background: #0bd850;
-    }
+   main-block>h2 {
+      margin: 0 0 0 8px;
+   }
 
+   main-block>.left-part,
+   form {
+      padding: 25px;
+   }
+
+   main-block>.left-part {
+      text-align: center;
+   }
+
+   .fa-graduation-cap {
+      font-size: 72px;
+   }
+
+   form {
+      background: rgba(0, 0, 0, 0.7);
+      height: 460px;
+      width: 365px;
+      padding: 20px;
+   }
+
+   .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+   }
+
+   .info {
+      display: flex;
+      flex-direction: column;
+   }
+
+   input,
+   select {
+      padding: 5px;
+      margin-bottom: 28px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      margin-right : 25px;
+   }
+
+   input::placeholder {
+      color: #eee;
+   }
+
+   .btn-item,
+   #sbmt {
+      padding: 10px 5px;
+      margin: 20px 0 10px 0;
+      border-radius: 5px;
+      border: none;
+      background: #26a9e0;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+   }
+
+   #sbmt {
+      width: 100%;
+   }
+
+   #sbmt:hover,
+   .btn-item:hover {
+      background: #0bd850;
+   }
+
+   #formGender {
+      background: rgba(0, 0, 0, 0.7);
+   }
+
+   #formGender>#gender {
+      color: #fff;
+   }
+
+   .sameRow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   #countryField{
+      margin-bottom : 10px !important;
+   }

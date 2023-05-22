@@ -1,0 +1,13 @@
+passport.viewPassport().then((result) => {console.log(result);}).catch((error) => {cosole.error(error);});
+passport.viewPassport();
+    console.error(error);
+    // Handle any errors that occurred during the function execution
+  .catch((error) => {
+  })
+    console.log(result);
+    // Handle the result
+passport.createPassport("k","k","k",8,"i",9,8,7,"ik").then((result) => {
+passport.createPassport("k","k","k",8,"i",9,8,7,"ik");
+    console.log("Contract deployed address:", passport.address);
+    const passport = await Passport.deploy();
+    const Passport = await ethers.getContractFactory("Passport");

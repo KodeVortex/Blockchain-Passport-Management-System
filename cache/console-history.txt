@@ -1,3 +1,221 @@
+console.log(data);
+  const data = passport.viewPassport();
+  const passport = new ethers.Contract(contractAddress,contractABI,provider);
+  const data = passport.viewPassport();
+  const passport = new ethers.Contract(contractAddress,contractABI,provider);
+  ]`
+    }
+      "type": "function"
+      "stateMutability": "view",
+      ],
+        }
+          "type": "tuple"
+          "name": "",
+          "internalType": "struct Passport.Person",
+          ],
+            }
+              "type": "string"
+              "name": "country",
+              "internalType": "string",
+            {
+            },
+              "type": "tuple"
+              "name": "dob",
+              "internalType": "struct Passport.Year",
+              ],
+                }
+                  "type": "uint256"
+                  "name": "year",
+                  "internalType": "uint256",
+                {
+                },
+                  "type": "uint256"
+                  "name": "month",
+                  "internalType": "uint256",
+                {
+                },
+                  "type": "uint256"
+                  "name": "day",
+                  "internalType": "uint256",
+                {
+              "components": [
+            {
+            },
+              "type": "string"
+              "name": "nationality",
+              "internalType": "string",
+            {
+            },
+              "type": "uint256"
+              "name": "age",
+              "internalType": "uint256",
+            {
+            },
+              "type": "string"
+              "name": "gender",
+              "internalType": "string",
+            {
+            },
+              "type": "string"
+              "name": "lastName",
+              "internalType": "string",
+            {
+            },
+              "type": "string"
+              "name": "firstName",
+              "internalType": "string",
+            {
+          "components": [
+        {
+      "outputs": [
+      "name": "viewPassport",
+      "inputs": [],
+    {
+    },
+      "type": "function"
+      "stateMutability": "view",
+      ],
+        }
+          "type": "string"
+          "name": "country",
+          "internalType": "string",
+        {
+        },
+          "type": "tuple"
+          "name": "dob",
+          "internalType": "struct Passport.Year",
+          ],
+            }
+              "type": "uint256"
+              "name": "year",
+              "internalType": "uint256",
+            {
+            },
+              "type": "uint256"
+              "name": "month",
+              "internalType": "uint256",
+            {
+            },
+              "type": "uint256"
+              "name": "day",
+              "internalType": "uint256",
+            {
+          "components": [
+        {
+        },
+          "type": "string"
+          "name": "nationality",
+          "internalType": "string",
+        {
+        },
+          "type": "uint256"
+          "name": "age",
+          "internalType": "uint256",
+        {
+        },
+          "type": "string"
+          "name": "gender",
+          "internalType": "string",
+        {
+        },
+          "type": "string"
+          "name": "lastName",
+          "internalType": "string",
+        {
+        },
+          "type": "string"
+          "name": "firstName",
+          "internalType": "string",
+        {
+      "outputs": [
+      "name": "user",
+      ],
+        }
+          "type": "address"
+          "name": "",
+          "internalType": "address",
+        {
+      "inputs": [
+    {
+    },
+      "type": "function"
+      "stateMutability": "nonpayable",
+      "outputs": [],
+      "name": "updatePassport",
+      ],
+        }
+          "type": "string"
+          "name": "_gender",
+          "internalType": "string",
+        {
+        },
+          "type": "string"
+          "name": "_lastName",
+          "internalType": "string",
+        {
+        },
+          "type": "string"
+          "name": "_firstName",
+          "internalType": "string",
+        {
+      "inputs": [
+    {
+    },
+      "type": "function"
+      "stateMutability": "nonpayable",
+      "outputs": [],
+      "name": "createPassport",
+      ],
+        }
+          "type": "string"
+          "name": "_country",
+          "internalType": "string",
+        {
+        },
+          "type": "uint256"
+          "name": "_bday",
+          "internalType": "uint256",
+        {
+        },
+          "type": "uint256"
+          "name": "_bmonth",
+          "internalType": "uint256",
+        {
+        },
+          "type": "uint256"
+          "name": "_byear",
+          "internalType": "uint256",
+        {
+        },
+          "type": "string"
+          "name": "_nationality",
+          "internalType": "string",
+        {
+        },
+          "type": "uint256"
+          "name": "_age",
+          "internalType": "uint256",
+        {
+        },
+          "type": "string"
+          "name": "_gender",
+          "internalType": "string",
+        {
+        },
+          "type": "string"
+          "name": "_lastName",
+          "internalType": "string",
+        {
+        },
+          "type": "string"
+          "name": "_firstName",
+          "internalType": "string",
+        {
+      "inputs": [
+    {
+const contractABI = `[
+  const provider = new ethers.providers.JsonRpcProvider
+  const contractAddress =  `0xd665b8940f669c03612001cf3fe99e0233db1ad5`;
     console.log("Contract deployed address:", passport.address);
     const passport = await Passport.deploy();
     const Passport = await ethers.getContractFactory

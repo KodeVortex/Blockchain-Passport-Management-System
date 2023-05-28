@@ -1,9 +1,7 @@
 .swal-overlay {
     background-color: rgba(165, 51, 43, 0.45);
   }
-
-.green-theme .swal-overlay {
-    background-color: rgba(38, 162, 113, 0.45);
+  .green-overlay .swal-overlay{
+    background-color: #4CAF50;
   }
-
 /*TO DO : Show different colors for overlays for connected and disconnected state of wallet */

@@ -4,7 +4,8 @@ LAST MODIFIED BY: @@Kishore
 */
 
 //Component to add a form for collecting details of new member to be added to blockchain
-import React, {useState, useEffect} from 'react';
+import swal from 'sweetalert';
+import React, {useState} from 'react';
 import './Create.css';
 import {ethers} from "ethers";
 //import {passport} from '../scripts/interaction';
@@ -13,7 +14,7 @@ export default function Create() {
   //start here
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner();
-    const contractAddress = `0xd665b8940f669c03612001cf3fe99e0233db1ad5`;
+    const contractAddress = "0xaf9f06fe26b1f28de9a2dfe6c3f8a9c4c08da2e6";
     const contractABI = `[
         {
           "inputs": [
@@ -234,7 +235,7 @@ export default function Create() {
     gender: '',
     age: '',
     nationality: '',
-    dob: (0,0,0),
+    dob: '',
     country: ''
   });
 
@@ -256,13 +257,17 @@ export default function Create() {
         userData.gender,
         parseInt(userData.age),
         userData.nationality,
-        parseInt(userData.dob.slice(6)),        
-        parseInt(userData.dob.slice(0, 3)),
-        parseInt(userData.dob.slice(3, 5)),
+        parseInt(userData.dob.slice(0, 4)),        
+        parseInt(userData.dob.slice(5, 7)),
+        parseInt(userData.dob.slice(8)),
         userData.country
       );
     
       console.log('Passport created successfully!');
+      swal({
+        title:"Passport Generated",
+        icon:"success"
+      })
       // Reset the form fields
       setUserData({
         firstName: '',

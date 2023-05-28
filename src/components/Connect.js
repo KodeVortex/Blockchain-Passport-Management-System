@@ -62,7 +62,9 @@ export default function Connect() {
         swal({
           title : "Connected",
           text : "Already connected to an account!",
-          className : "green-theme"});
+          icon:"success",
+          className: "green-overlay"
+        });
       }
       else {
         await window.ethereum.request({ method: 'eth_requestAccounts' });

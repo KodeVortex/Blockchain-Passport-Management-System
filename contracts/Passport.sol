@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity <=0.8.9;
 
-import "hardhat/console.sol";
 contract Passport {
-    address ADMIN = msg.sender;
+    address public ADMIN;
 
     struct Year {
         uint day;
@@ -19,12 +18,18 @@ contract Passport {
         string nationality;
         Year dob;
         string country;
-        //bool verified;
+        bool isVerified;
+        bool isBlacklisted;
     }
-    //Person[] public persons;
+
     mapping(address => Person) public user;
+    
+    constructor() {
+    ADMIN = msg.sender;
+    }
 
     function createPassport(
+        address userId,
         string memory _firstName,
         string memory _lastName,
         string memory _gender,
@@ -35,30 +40,48 @@ contract Passport {
         uint _bday,
         string memory _country
     ) public {
-        //persons.push(Person(msg.sender,_name,_nationality,_age));
-
-        user[msg.sender] = Person(
+        require(msg.sender == ADMIN,"Only admins can create passport");
+        user[userId] = Person(
             _firstName,
             _lastName,
             _gender,
             _age,
             _nationality,
             Year(_bday, _bmonth, _byear),
-            _country
+            _country,
+            false,
+            false
         );
     }
 
-    function viewPassport() public view returns (Person memory) {
+    function userViewPassport() public view returns (Person memory) {
         return user[msg.sender];
+    }
+    
+    function adminViewPassport(address userId) public view returns (Person memory) {
+        require(msg.sender == ADMIN,"Action can only be performed by concerned officials");
+        return user[userId];
+         }
+
+    function verifyPassport(address userId) public{
+        require(msg.sender == ADMIN,"Will be verifid by concerned officials");
+        user[userId].isVerified = true;
+    }
+
+       function blacklistPassport(address userId) public{
+        require(msg.sender == ADMIN,"Can only be blacklisted by concerned officials");
+        user[userId].isBlacklisted = true;
     }
 
     function updatePassport(
+        address userId,
         string memory _firstName,
         string memory _lastName,
         string memory _gender
     ) public {
-        user[msg.sender].firstName = _firstName;
-        user[msg.sender].lastName = _lastName;
-        user[msg.sender].gender = _gender;
+        require(msg.sender == ADMIN,"Only Admins can make changes");
+        user[userId].firstName = _firstName;
+        user[userId].lastName = _lastName;
+        user[userId].gender = _gender;
     }
 }

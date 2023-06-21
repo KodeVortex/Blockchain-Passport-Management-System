@@ -9,7 +9,6 @@ import Back from './components/Back';
 import AddressInput from './components/AddressInput';
 import AdminView from './components/AdminView';
 import UserHome from './components/UserHome';
-import AddressInputCreate from './components/AddressInputCreate';
 import {
   Link,
   BrowserRouter,
@@ -26,7 +25,6 @@ function App() {
         <Back />
         <Routes>
           <Route path="/" element={<AdminHome />} />
-          <Route path="/addressInputCreate" element={<AddressInputCreate />} />
           <Route path="/create" element={<Create />} />
           <Route path="/addressInput" element={<AddressInput />} />
           <Route path="/adminView" element={<AdminView />} />

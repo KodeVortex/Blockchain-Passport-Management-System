@@ -12,14 +12,90 @@ const ethers = require ('ethers');
 
 export default function View() {
   
-  const contractAddress =  "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+  const contractAddress =  "0x77D8d510934561b0C2cd774A3F7eeb2050B177b5";
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   const signer = provider.getSigner();
   const contractABI = ` [
     {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_firstName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_lastName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_gender",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_age",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_nationality",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_byear",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_bmonth",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_bday",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_country",
+          "type": "string"
+        }
+      ],
+      "name": "createPassport",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
       "inputs": [],
       "stateMutability": "nonpayable",
       "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_firstName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_lastName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_gender",
+          "type": "string"
+        }
+      ],
+      "name": "updatePassport",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     },
     {
       "inputs": [],
@@ -97,16 +173,6 @@ export default function View() {
               "internalType": "string",
               "name": "country",
               "type": "string"
-            },
-            {
-              "internalType": "bool",
-              "name": "isVerified",
-              "type": "bool"
-            },
-            {
-              "internalType": "bool",
-              "name": "isBlacklisted",
-              "type": "bool"
             }
           ],
           "internalType": "struct Passport.Person",
@@ -115,100 +181,6 @@ export default function View() {
         }
       ],
       "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "userId",
-          "type": "address"
-        }
-      ],
-      "name": "blacklistPassport",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "_firstName",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_lastName",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_gender",
-          "type": "string"
-        },
-        {
-          "internalType": "uint256",
-          "name": "_age",
-          "type": "uint256"
-        },
-        {
-          "internalType": "string",
-          "name": "_nationality",
-          "type": "string"
-        },
-        {
-          "internalType": "uint256",
-          "name": "_byear",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "_bmonth",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "_bday",
-          "type": "uint256"
-        },
-        {
-          "internalType": "string",
-          "name": "_country",
-          "type": "string"
-        }
-      ],
-      "name": "createPassport",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "userId",
-          "type": "address"
-        },
-        {
-          "internalType": "string",
-          "name": "_firstName",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_lastName",
-          "type": "string"
-        },
-        {
-          "internalType": "string",
-          "name": "_gender",
-          "type": "string"
-        }
-      ],
-      "name": "updatePassport",
-      "outputs": [],
-      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -272,16 +244,6 @@ export default function View() {
           "internalType": "string",
           "name": "country",
           "type": "string"
-        },
-        {
-          "internalType": "bool",
-          "name": "isVerified",
-          "type": "bool"
-        },
-        {
-          "internalType": "bool",
-          "name": "isBlacklisted",
-          "type": "bool"
         }
       ],
       "stateMutability": "view",
@@ -344,16 +306,6 @@ export default function View() {
               "internalType": "string",
               "name": "country",
               "type": "string"
-            },
-            {
-              "internalType": "bool",
-              "name": "isVerified",
-              "type": "bool"
-            },
-            {
-              "internalType": "bool",
-              "name": "isBlacklisted",
-              "type": "bool"
             }
           ],
           "internalType": "struct Passport.Person",
@@ -362,19 +314,6 @@ export default function View() {
         }
       ],
       "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "userId",
-          "type": "address"
-        }
-      ],
-      "name": "verifyPassport",
-      "outputs": [],
-      "stateMutability": "nonpayable",
       "type": "function"
     }
   ]`

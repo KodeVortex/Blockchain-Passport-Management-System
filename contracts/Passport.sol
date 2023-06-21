@@ -18,8 +18,6 @@ contract Passport {
         string nationality;
         Year dob;
         string country;
-        bool isVerified;
-        bool isBlacklisted;
     }
 
     mapping(address => Person) public user;
@@ -29,7 +27,6 @@ contract Passport {
     }
 
     function createPassport(
-        address userId,
         string memory _firstName,
         string memory _lastName,
         string memory _gender,
@@ -40,17 +37,14 @@ contract Passport {
         uint _bday,
         string memory _country
     ) public {
-        require(msg.sender == ADMIN,"Only admins can create passport");
-        user[userId] = Person(
+        user[msg.sender] = Person(
             _firstName,
             _lastName,
             _gender,
             _age,
             _nationality,
             Year(_bday, _bmonth, _byear),
-            _country,
-            false,
-            false
+            _country
         );
     }
 
@@ -63,25 +57,13 @@ contract Passport {
         return user[userId];
          }
 
-    function verifyPassport(address userId) public{
-        require(msg.sender == ADMIN,"Will be verifid by concerned officials");
-        user[userId].isVerified = true;
-    }
-
-       function blacklistPassport(address userId) public{
-        require(msg.sender == ADMIN,"Can only be blacklisted by concerned officials");
-        user[userId].isBlacklisted = true;
-    }
-
     function updatePassport(
-        address userId,
         string memory _firstName,
         string memory _lastName,
         string memory _gender
     ) public {
-        require(msg.sender == ADMIN,"Only Admins can make changes");
-        user[userId].firstName = _firstName;
-        user[userId].lastName = _lastName;
-        user[userId].gender = _gender;
+        user[msg.sender].firstName = _firstName;
+        user[msg.sender].lastName = _lastName;
+        user[msg.sender].gender = _gender;
     }
 }

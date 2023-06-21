@@ -11,9 +11,8 @@ export default function AddressInput() {
   const handleChange = (e) =>{
     e.preventDefault();
     address = e.target.value; 
-    console.log(address);     
   };
-  console.log(address);  
+
   return (
     <div className="addressCard">
       <form action="">
